@@ -11,11 +11,11 @@ const AppDataSource = new DataSource({
     port: 5432,
     username: process.env.USER,
     password: process.env.PW,
-    database: "neondb",
+    database: process.env.DB,
     synchronize: false,
     logging: false,
     migrationsRun: false,
-    ssl:true,
+    ssl:false,
     entities: ["dist/entity/*.js"],
     migrations: ["dist/migration/*.js"],
 })
