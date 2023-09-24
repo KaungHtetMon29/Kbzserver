@@ -1,4 +1,4 @@
-import useracc from "../../entity/user";
+import useracc from "../../entity/useracc";
 import AppDataSource from "../../db/data-source";
 
 import { Request, Response } from "express";

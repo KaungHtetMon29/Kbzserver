@@ -2,7 +2,7 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 
 import post from "../entity/post";
-import useracc from "../entity/user";
+import useracc from "../entity/useracc";
 require("dotenv").config();
 
 const AppDataSource = new DataSource({

@@ -5,7 +5,7 @@ import {
   ManyToOne,
   JoinColumn,
 } from "typeorm";
-import user from "./user";
+
 @Entity({ name: "post" })
 class post {
   @PrimaryGeneratedColumn()
