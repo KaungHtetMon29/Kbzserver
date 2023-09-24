@@ -1,12 +1,10 @@
 import { Request, Response } from "express";
 import AppDataSource from "../../db/data-source";
 import post from "../../entity/post";
-const fs = require("fs");
-const path = "C:/Users/User/Downloads/20746889-[Converted] 1.png";
+// const fs = require("fs");
+
 const postrepo = AppDataSource.getRepository(post);
 export async function add(req: Request, res: Response) {
-  let imgdata = "";
-
   const { img, title, date, post, benefits, category, tag, userid } = req.body;
   //   const tos=fs.readFile(path, (err, data) => {
   //     if (err) {

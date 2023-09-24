@@ -2,10 +2,10 @@ import useracc from "../../entity/useracc";
 import AppDataSource from "../../db/data-source";
 
 import { Request, Response } from "express";
-const fs = require("fs");
+// const fs = require("fs");
 const bcrypt = require("bcrypt");
 const userrepo = AppDataSource.getRepository(useracc);
-const path = "C:/Users/User/Downloads/20746889-[Converted] 1.png";
+// const path = "C:/Users/User/Downloads/20746889-[Converted] 1.png";
 export async function add(req: Request, res: Response) {
   let imgdata = "";
   console.log(req.body);
