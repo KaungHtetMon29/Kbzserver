@@ -15,7 +15,7 @@ const AppDataSource = new DataSource({
   synchronize: false,
   logging: false,
   migrationsRun: false,
-  ssl: true,
+  ssl: false,
   entities: [useracc, post],
   migrations: ["dist/migration/*.js"],
 });
