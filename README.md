@@ -5,3 +5,10 @@ Steps to run this project:
 1. Run `npm i` command
 2. Setup database settings inside `data-source.ts` file
 3. Run `npm start` command
+
+## How to use
+
+make an env file and fill as in .env.sample file
+you have to build it first with yarn build
+After that run this command yarn:migrate:run
+Then run yarn start to use server
