@@ -61,9 +61,14 @@ export async function findone(req: Request, res: Response) {
   return res.status(200).json(Singlepost);
 }
 export async function findAll(req: Request, res: Response) {
-  const Singlepost = await postrepo.find({ where: { userid: req.query.user } });
-
-  return res.status(200).json(Singlepost);
+  const Singlepost = await postrepo.find({
+    where: { userid: req.query.user },
+    take: req.query.count,
+    skip: (req.query.page - 1) * req.query.count,
+  });
+  const count = await postrepo.count();
+  console.log(req.query);
+  return res.status(200).json({ post: Singlepost, count: count });
 }
 export async function update(req: Request, res: Response) {
   const postid = req.params.postid;
