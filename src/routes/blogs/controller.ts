@@ -62,7 +62,7 @@ export async function findAll(req: Request, res: Response) {
   const Singlepost = await postrepo.find({
     where: { userid: req.query.user },
     take: req.query.count,
-    skip: (req.query.page - 1) * req.query.count,
+    skip: (Number(req.query.page) - 1) * Number(req.query.count),
   });
   const count = await postrepo.count();
   console.log(req.query);
