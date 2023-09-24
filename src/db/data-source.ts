@@ -1,7 +1,5 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import testtable from "../entity/testtable";
-import test2 from "../entity/test2";
 
 import post from "../entity/post";
 import useracc from "../entity/user";
