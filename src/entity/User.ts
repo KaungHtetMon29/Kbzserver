@@ -1,17 +1,15 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import post from "./post";
 
-@Entity()
-export class User {
-
-    @PrimaryGeneratedColumn()
-    id: number
-
-    @Column()
-    firstName: string
-
-    @Column()
-    lastName: string
-
-    @Column()
-    age: number
+@Entity({ name: "useracc" })
+class useracc {
+  @PrimaryGeneratedColumn()
+  id: number;
+  @Column({ nullable: false })
+  name: string;
+  @Column({ nullable: false })
+  pw: string;
+  @Column({ nullable: false, type: "bytea" })
+  img: string;
 }
+export default useracc;
