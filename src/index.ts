@@ -15,7 +15,7 @@ app.use(express.json({ limit: "10mb" }));
 const keepalive = () => {
   console.log("running");
 };
-setInterval(keepalive, 10 * 60 * 1000);
+setInterval(keepalive, 14 * 60 * 1000);
 app.use(express.json());
 app.use(cors());
 app.use("/", routes);
