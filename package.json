@@ -21,7 +21,7 @@
    },
    "scripts": {
       "build": "npx tsc & ts-node ./node_modules/typeorm/cli.js migration:run -d ./src/db/data-source.ts",
-      "start": "node dist/index.js",
+      "start": "node ./dist/index.js",
       "dev": "nodemon src/index.ts",
       "typeorm": "typeorm-ts-node-commonjs",
       "migrate:run": "ts-node ./node_modules/typeorm/cli.js migration:run -d ./src/db/data-source.ts"
